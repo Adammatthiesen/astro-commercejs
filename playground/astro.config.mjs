@@ -1,8 +1,7 @@
-import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
-import packageName from "package-name";
+import astroCommerceJS from "@adammatthiesen/astro-commercejs";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), packageName()],
+	integrations: [astroCommerceJS()],
 });

@@ -1,6 +1,6 @@
-# `package-name`
+# `Astro-CommerceJS`
 
-This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) that TODO:description
+This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) that brings the CommerceJS SDK into Astro snap in package.
 
 ## Usage
 
@@ -13,15 +13,15 @@ TODO:
 Install the integration **automatically** using the Astro CLI:
 
 ```bash
-pnpm astro add package-name
+pnpm astro add @adammatthiesen/astro-commercejs
 ```
 
 ```bash
-npm astro add package-name
+npm astro add @adammatthiesen/astro-commercejs
 ```
 
 ```bash
-yarn astro add package-name
+yarn astro add @adammatthiesen/astro-commercejs
 ```
 
 Or install it **manually**:
@@ -29,25 +29,25 @@ Or install it **manually**:
 1. Install the required dependencies
 
 ```bash
-pnpm add package-name
+pnpm add @adammatthiesen/astro-commercejs
 ```
 
 ```bash
-npm install package-name
+npm install @adammatthiesen/astro-commercejs
 ```
 
 ```bash
-yarn add package-name
+yarn add @adammatthiesen/astro-commercejs
 ```
 
 2. Add the integration to your astro config
 
 ```diff
-+import integration from "package-name";
++import astroCommerceJS from "@adammatthiesen/astro-commercejs";
 
 export default defineConfig({
   integrations: [
-+    integration(),
++    astroCommerceJS(),
   ],
 });
 ```
@@ -79,7 +79,7 @@ You can now edit files in `package`. Please note that making changes to those fi
 
 ## Licensing
 
-[MIT Licensed](https://github.com/TODO:/blob/main/LICENSE). Made with ❤️ by [TODO:](https://github.com/TODO:).
+[MIT Licensed](./LICENSE). Made with ❤️ by [Adam M.](https://github.com/AdamMatthiesen).
 
 ## Acknowledgements
 
