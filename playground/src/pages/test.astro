@@ -1,0 +1,14 @@
+---
+import { AstroCommerceJS } from "@adammatthiesen/astro-commercejs";
+
+const commercejs = await AstroCommerceJS();
+
+const { merchant, categories, products} = commercejs
+
+---
+
+<div>
+    <pre>{JSON.stringify(merchant, null, 2)}</pre>
+    <pre>{JSON.stringify(categories, null, 2)}</pre>
+    <pre>{JSON.stringify(products, null, 2)}</pre>
+</div>
