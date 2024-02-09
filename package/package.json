@@ -1,6 +1,6 @@
 {
   "name": "@adammatthiesen/astro-commercejs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An Astro Integration to bring the CommerceJS SDK into Astro snap in package.",
   "author": {
     "email": "adam@matthiesen.xyz",

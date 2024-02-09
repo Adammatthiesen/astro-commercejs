@@ -16,3 +16,4 @@ export async function AstroCommerceJS() {
 
     return { merchant, categories, products};
 }
+

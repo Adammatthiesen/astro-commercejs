@@ -1,0 +1,27 @@
+name: NPM-Create
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publishnpm:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./package
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: publish-npm
+        run: |
+          # Change publish registry
+          echo "$(jq '.publishConfig.registry = "https://registry.npmjs.org"' package.json)" > package.json
+          # Publish package
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
