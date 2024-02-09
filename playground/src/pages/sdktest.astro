@@ -1,0 +1,22 @@
+---
+import { commerce } from "@adammatthiesen/astro-commercejs";
+const merchantAbout = await commerce.merchants.about();
+
+export async function getFullCatalog() {
+    const { data: categories } = await commerce.categories.list();
+    const { data: products } = await commerce.products.list();
+
+    return { categories, products};
+}
+
+const { categories, products } = await getFullCatalog()
+---
+<h1>{merchantAbout.business_name}</h1>
+
+<div>
+    <h1>This is a API Test Below is the JSON output from the API</h1>
+    <h2>Categories</h2>
+    <pre>{JSON.stringify(categories, null, 2)}</pre>
+    <h2>Products</h2>
+    <pre>{JSON.stringify(products, null, 2)}</pre>
+</div>
