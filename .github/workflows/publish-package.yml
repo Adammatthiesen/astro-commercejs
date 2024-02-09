@@ -1,4 +1,4 @@
-name: NPM-Create
+name: Publish to NPM
 
 on:
   workflow_dispatch:
