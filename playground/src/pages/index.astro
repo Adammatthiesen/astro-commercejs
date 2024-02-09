@@ -1,15 +1,9 @@
 ---
 import { AstroCommerceJS } from "@adammatthiesen/astro-commercejs";
-import { commerce } from "@adammatthiesen/astro-commercejs";
 
 const commercejs = await AstroCommerceJS();
 const { merchant, categories, products} = commercejs
-
-const merchantAbout = await commerce.merchants.about();
-
 ---
-<h1>{merchantAbout.business_name}</h1>
-
 <div>
     <h2>This is a API Test Below is the JSON output from the API</h2>
     <h3>Merchants</h3>
