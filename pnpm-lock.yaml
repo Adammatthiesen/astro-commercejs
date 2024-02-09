@@ -14,12 +14,24 @@ importers:
 
   package:
     dependencies:
+      '@chec/commerce.js':
+        specifier: 2.8.0
+        version: 2.8.0
+      '@types/chec__commerce.js':
+        specifier: 2.8.11
+        version: 2.8.11
       astro:
         specifier: ^4.0.0
         version: 4.1.2
       astro-integration-kit:
         specifier: 0.0.12
         version: 0.0.12(astro@4.1.2)
+      vite:
+        specifier: ^5.0.12
+        version: 5.0.12(@types/node@20.11.17)
+      vite-tsconfig-paths:
+        specifier: ^4.2.2
+        version: 4.3.1(vite@5.0.12)
 
   playground:
     dependencies:
@@ -370,6 +382,13 @@ packages:
       '@babel/types': 7.23.6
     dev: false
 
+  /@babel/runtime@7.23.9:
+    resolution: {integrity: sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
     engines: {node: '>=6.9.0'}
@@ -493,6 +512,15 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@chec/commerce.js@2.8.0:
+    resolution: {integrity: sha512-OPBphT/hU33iDp52zzYOqz/oSXLhEuhGVUg2UNvYtmBW4eCNmtsM0dqW0+wu+6K0d6fZojurCBdVQMKb2R7l3g==}
+    dependencies:
+      '@babel/runtime': 7.23.9
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /@emmetio/abbreviation@2.3.3:
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -897,6 +925,10 @@ packages:
       '@babel/types': 7.23.6
     dev: false
 
+  /@types/chec__commerce.js@2.8.11:
+    resolution: {integrity: sha512-5TF3ZhkK4H2bSnnQNOX7Lc1OXLyVuwFe3UEijUIbr/EsjFTx5Vmkh51whi/8UA5fqCO9AlPIacUNcCB/6rAz8Q==}
+    dev: false
+
   /@types/debug@4.1.12:
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
     dependencies:
@@ -1164,8 +1196,8 @@ packages:
       tsconfck: 3.0.1(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.0.11
-      vitefu: 0.2.5(vite@5.0.11)
+      vite: 5.0.12(@types/node@20.11.17)
+      vitefu: 0.2.5(vite@5.0.12)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -1264,6 +1296,14 @@ packages:
       - supports-color
       - terser
       - typescript
+    dev: false
+
+  /axios@0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
+    dependencies:
+      follow-redirects: 1.15.5
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /axobject-query@4.0.0:
@@ -1825,6 +1865,16 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
     requiresBuild: true
@@ -1881,6 +1931,10 @@ packages:
   /globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
+    dev: false
+
+  /globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: false
 
   /graceful-fs@4.2.11:
@@ -3031,6 +3085,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
 
+  /regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+    dev: false
+
   /rehype-parse@9.0.0:
     resolution: {integrity: sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==}
     dependencies:
@@ -3719,39 +3777,21 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@5.0.11:
-    resolution: {integrity: sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
+  /vite-tsconfig-paths@4.3.1(vite@5.0.12):
+    resolution: {integrity: sha512-cfgJwcGOsIxXOLU/nELPny2/LUD/lcf1IbfyeKTv2bsupVbTH/xpFtdQlBmIP1GEK2CjjLxYhFfB+QODFAx5aw==}
     peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
+      vite: '*'
     peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
+      vite:
         optional: true
     dependencies:
-      esbuild: 0.19.11
-      postcss: 8.4.33
-      rollup: 4.9.5
-    optionalDependencies:
-      fsevents: 2.3.3
+      debug: 4.3.4
+      globrex: 0.1.2
+      tsconfck: 3.0.1(typescript@5.3.3)
+      vite: 5.0.12(@types/node@20.11.17)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /vite@5.0.12(@types/node@20.11.17):
@@ -3788,17 +3828,6 @@ packages:
       rollup: 4.9.5
     optionalDependencies:
       fsevents: 2.3.3
-    dev: false
-
-  /vitefu@0.2.5(vite@5.0.11):
-    resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
-    peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
-    peerDependenciesMeta:
-      vite:
-        optional: true
-    dependencies:
-      vite: 5.0.11
     dev: false
 
   /vitefu@0.2.5(vite@5.0.12):

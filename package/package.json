@@ -20,6 +20,7 @@
     "access": "public"
   },
   "sideEffects": false,
+  "files": ["src"],
   "exports": {
     ".": "./src/index.ts"
   },
@@ -29,6 +30,10 @@
     "astro": "^4.0.0"
   },
   "dependencies": {
-    "astro-integration-kit": "0.0.12"
+    "astro-integration-kit": "0.0.12",
+    "@chec/commerce.js": "2.8.0",
+    "@types/chec__commerce.js": "2.8.11",
+    "vite": "^5.0.12",
+    "vite-tsconfig-paths": "^4.2.2"
   }
 }

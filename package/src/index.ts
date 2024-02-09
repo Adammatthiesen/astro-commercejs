@@ -1,3 +1,4 @@
-import { astroCommerceJS } from "./integration.js";
+import integration from "./integration.js";
 
-export default astroCommerceJS;
+export default integration;
+export * from "./lib/commerce.js"
