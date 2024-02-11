@@ -1,4 +1,5 @@
 import { createResolver, defineIntegration } from "astro-integration-kit";
+import { corePlugins } from "astro-integration-kit/plugins";
 import { commerce } from "./lib/commerce.js";
 import { loadEnv } from 'vite';
 
@@ -13,6 +14,7 @@ const fetchStatus = MerchantInfo.status;
 
 export default defineIntegration({
 	name: "astro-commercejs",
+	plugins: [...corePlugins],
 	setup(){
 		const { resolve } = createResolver(import.meta.url);
 
