@@ -17,7 +17,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.5.1",
     "@adammatthiesen/astro-commercejs": "workspace:*",
-    "@types/node": "^20.11.17",
+    "@types/node": "^20.11.19",
     "typescript": "^5.3.3"
   }
 }
