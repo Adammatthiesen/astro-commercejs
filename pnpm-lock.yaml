@@ -24,8 +24,8 @@ importers:
         specifier: ^4.0.0
         version: 4.1.2
       astro-integration-kit:
-        specifier: 0.1.1
-        version: 0.1.1(astro@4.1.2)
+        specifier: 0.3.0
+        version: 0.3.0(astro@4.1.2)
       vite:
         specifier: ^5.0.12
         version: 5.0.12(@types/node@20.11.17)
@@ -1123,13 +1123,12 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro-integration-kit@0.1.1(astro@4.1.2):
-    resolution: {integrity: sha512-neaW35UzTC7j7dg7pAV/kXHbeSsCdJCbpg4UrgyCGRHD2l+LxLbmuMAaFDCupPED5TtYnuR4zi9osha7Vcfsdw==}
+  /astro-integration-kit@0.3.0(astro@4.1.2):
+    resolution: {integrity: sha512-ZrJu50KlHM9Spl6GJzRGcPVDRNR9iokEPUaszoh38EvnwQehUe5r7mdKWVWQkvuVIl8W91O5sDUsklm1Yj10vA==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
       astro: 4.1.2
-      defu: 6.1.4
       pathe: 1.1.2
     dev: false
 
@@ -1625,10 +1624,6 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
-
-  /defu@6.1.4:
-    resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
-    dev: false
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
